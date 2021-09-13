@@ -21,7 +21,7 @@ public class homepage implements ActionListener {
     Font fon1,fon2,fon3;
     JLabel lbl_profile_heading,lbl_fname, lbl_lname, lbl_username,lbl_email,lbl_gender,lbl_pass,lbl_cpass,lbl_imgpro;
     ImageIcon product1,product2,product3,product4,product5,product6,product7,product8,product9,product10;
-    JButton btn_update,btn_product1,btn_product2;
+    JButton btn_update,btn_product1,btn_product2,btn_product3,btn_product4,btn_product5,btn_product6,btn_product7,btn_product8,btn_product9,btn_product10;
     String user;
     public homepage(JPanel panel) {
 
@@ -45,45 +45,126 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(250, 20, 190, 160);
         panel.add(lbl_imgpro);
 
+        btn_product2=new JButton("Add To Cart");
+        btn_product2.setFont(fon1);
+        btn_product2.setBackground(new Color(11,135,15));
+        btn_product2.setBorder(new LineBorder(Color.green,4));
+        btn_product2.setForeground(new Color(255,255,255));
+        btn_product2.setBounds(30,220,190,50);
+        btn_product2.addActionListener(this);
+        panel.add(btn_product2);
+
         product3 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item1.png")));
         lbl_imgpro = new JLabel(product3);
         lbl_imgpro.setBounds(470, 20, 190, 160);
         panel.add(lbl_imgpro);
+
+        btn_product3=new JButton("Add To Cart");
+        btn_product3.setFont(fon1);
+        btn_product3.setBackground(new Color(11,135,15));
+        btn_product3.setBorder(new LineBorder(Color.green,4));
+        btn_product3.setForeground(new Color(255,255,255));
+        btn_product3.setBounds(30,220,190,50);
+        btn_product3.addActionListener(this);
+        panel.add(btn_product3);
 
         product4 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product4);
         lbl_imgpro.setBounds(700, 20, 190, 160);
         panel.add(lbl_imgpro);
 
+        btn_product4=new JButton("Add To Cart");
+        btn_product4.setFont(fon1);
+        btn_product4.setBackground(new Color(11,135,15));
+        btn_product4.setBorder(new LineBorder(Color.green,4));
+        btn_product4.setForeground(new Color(255,255,255));
+        btn_product4.setBounds(30,220,190,50);
+        btn_product4.addActionListener(this);
+        panel.add(btn_product4);
+
         product5 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product5);
         lbl_imgpro.setBounds(920, 20, 190, 160);
         panel.add(lbl_imgpro);
+
+        btn_product5=new JButton("Add To Cart");
+        btn_product5.setFont(fon1);
+        btn_product5.setBackground(new Color(11,135,15));
+        btn_product5.setBorder(new LineBorder(Color.green,4));
+        btn_product5.setForeground(new Color(255,255,255));
+        btn_product5.setBounds(30,220,190,50);
+        btn_product5.addActionListener(this);
+        panel.add(btn_product5);
 
         product6 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product6);
         lbl_imgpro.setBounds(30, 350, 190, 160);
         panel.add(lbl_imgpro);
 
+        btn_product6=new JButton("Add To Cart");
+        btn_product6.setFont(fon1);
+        btn_product6.setBackground(new Color(11,135,15));
+        btn_product6.setBorder(new LineBorder(Color.green,4));
+        btn_product6.setForeground(new Color(255,255,255));
+        btn_product6.setBounds(30,220,190,50);
+        btn_product6.addActionListener(this);
+        panel.add(btn_product6);
+
         product7 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product7);
         lbl_imgpro.setBounds(250, 350, 190, 160);
         panel.add(lbl_imgpro);
+
+        btn_product7=new JButton("Add To Cart");
+        btn_product7.setFont(fon1);
+        btn_product7.setBackground(new Color(11,135,15));
+        btn_product7.setBorder(new LineBorder(Color.green,4));
+        btn_product7.setForeground(new Color(255,255,255));
+        btn_product7.setBounds(30,220,190,50);
+        btn_product7.addActionListener(this);
+        panel.add(btn_product7);
 
         product8 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product8);
         lbl_imgpro.setBounds(470, 350, 190, 160);
         panel.add(lbl_imgpro);
 
+        btn_product8=new JButton("Add To Cart");
+        btn_product8.setFont(fon1);
+        btn_product8.setBackground(new Color(11,135,15));
+        btn_product8.setBorder(new LineBorder(Color.green,4));
+        btn_product8.setForeground(new Color(255,255,255));
+        btn_product8.setBounds(30,220,190,50);
+        btn_product8.addActionListener(this);
+        panel.add(btn_product8);
+
         product9 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product9);
         lbl_imgpro.setBounds(700, 350, 190, 160);
         panel.add(lbl_imgpro);
 
+        btn_product9=new JButton("Add To Cart");
+        btn_product9.setFont(fon1);
+        btn_product9.setBackground(new Color(11,135,15));
+        btn_product9.setBorder(new LineBorder(Color.green,4));
+        btn_product9.setForeground(new Color(255,255,255));
+        btn_product9.setBounds(30,220,190,50);
+        btn_product9.addActionListener(this);
+        panel.add(btn_product9);
+
         product10 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product10);
         lbl_imgpro.setBounds(920, 350, 190, 160);
         panel.add(lbl_imgpro);
+
+        btn_product10=new JButton("Add To Cart");
+        btn_product10.setFont(fon1);
+        btn_product10.setBackground(new Color(11,135,15));
+        btn_product10.setBorder(new LineBorder(Color.green,4));
+        btn_product10.setForeground(new Color(255,255,255));
+        btn_product10.setBounds(30,220,190,50);
+        btn_product10.addActionListener(this);
+        panel.add(btn_product10);
 
 
 
