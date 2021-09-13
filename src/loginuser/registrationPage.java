@@ -99,10 +99,12 @@ public class registrationPage implements ActionListener {
         regMale.setForeground(new Color(255, 255, 255));
         regMale.setBounds(490, 406, 80, 30);
         regMale.setFont(fon2);
+
         regFemale = new JRadioButton("Female");
         regFemale.setForeground(new Color(255, 255, 255));
         regFemale.setBounds(590, 406, 100, 30);
         regFemale.setFont(fon2);
+
         ButtonGroup bg = new ButtonGroup();
         bg.add(regMale);
         bg.add(regFemale);

@@ -16,7 +16,7 @@ import javax.swing.border.LineBorder;
 public class MainPage implements ActionListener{
     JFrame fr;
     JPanel panel,panel1,panel2,panel_purchase,panel_profile,panel_cart;
-    Font fon1,fon2,fon3;
+    Font fon1,fon2,fon3,fon4;
     ImageIcon image_bg, imageprofile_bg,gender_pic;
     JLabel lbl_img,lbl_topic,lbl_gender_pic,lbl_welcome,lbl_imgpro;
     JButton btn_purchase,btn_profile,btn_cart;
@@ -30,6 +30,8 @@ public class MainPage implements ActionListener{
         fon1=new Font("algerian",Font.BOLD,50);
         fon2=new Font("algerian",Font.BOLD,30);
         fon3=new Font("algerian",Font.BOLD,40);
+        fon4=new Font("algerian",Font.BOLD,60);
+
 
         //Main/whole panel
         panel= new JPanel();
