@@ -6,7 +6,7 @@ public class productData {
     String product_p1;
 
 
-    public productData(String username,String product_1, String product_p1) {
+    public productData(String username, String product_1, String product_p1) {
         super();
         this.username = username;
         this.product_1 = product_1;
