@@ -116,10 +116,9 @@ public class MainPage implements ActionListener{
         panel_cart= new JPanel();
         panel_cart.setLayout(null);
         panel_cart.setLocation(0, 0);
-        panel_cart.setBounds(0,100,1175,705);
+        panel_cart.setBounds(0,100,1095,640);
         panel_cart.setBackground(new Color(68,2,150));
         panel2.add(panel_cart);
-        new cart(panel_cart);
 
 
         btn_profile=new JButton("Profile");
@@ -191,7 +190,7 @@ public class MainPage implements ActionListener{
             panel_cart.removeAll();
             panel_cart.repaint();
             panel_cart.revalidate();
-            new cart(panel_cart);
+            new cart(panel_cart,user);
         }
 
 

@@ -1,19 +1,13 @@
 package loginuser;
 
-import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.sql.ResultSet;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -21,8 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
+
 public class cart implements ActionListener {
     JLabel lbl_topic,lbl_select;
     JTextField txt_id;
@@ -33,7 +26,11 @@ public class cart implements ActionListener {
     JTable jt;
     DefaultTableModel model;
     JScrollPane pg;
-   /* public void del(JPanel panel,String user) {
+
+
+
+
+    public void del(JPanel panel,String user) {
         this.user=user;
         this.panel=panel;
         jt= new JTable();
@@ -42,43 +39,35 @@ public class cart implements ActionListener {
         jt.setRowHeight(40);
         jt.setBackground(new Color(211,244,252));
         model.addColumn("Id");
-        model.addColumn("User Name");
-        model.addColumn("Mobile Name");
-        model.addColumn("Company");
-        model.addColumn("RAM");
-        model.addColumn("Storage");
+        model.addColumn("Product Name");
         model.addColumn("Price");
-        model.addColumn("Processor");
-        model.addColumn("Camera");
-        model.addColumn("Contact");
+
+
         JTableHeader header = jt.getTableHeader();
         header.setFont(fon);
-        header.setBackground(Color.black);
+        header.setBackground(Color.gray);
         header.setForeground(Color.white);
         jt.getTableHeader().setPreferredSize(new Dimension(100,50));
         try {
-            JDBCoperation db=new JDBCoperation();
-            String query="select * from buysell where username='"+user+"'";
+            DbOperation db=new DbOperation();
+            String query="select * from product where username='"+user+"'";
             ResultSet rs=db.select(query);
 
-
-            while(rs.next()){
-                model.addRow(new Object[]{rs.getString(1), rs.getString(2),rs.getString(3),
-                        rs.getString(4),rs.getString(5), rs.getString(6),rs.getString(7),
-                        rs.getString(8),rs.getString(9),rs.getString(10)});
-                System.out.println(rs.getString(1));
-            }
+             while(rs.next()){
+                 model.addRow(new Object[]{rs.getString(1),rs.getString(3),
+                         rs.getString(4)});
+                 System.out.println(rs.getString(1));
+             }
         }
         catch (Exception e) {
             System.out.println(e.getMessage());
         }
         pg = new JScrollPane(jt);
-        pg.setBounds(0,150,1180,250);
+        pg.setBounds(0,150,1000,450);
         panel.add(pg);
-    }*/
+    }
 
-
-   /* public cart(JPanel panel_cart, String user) {
+    public cart(JPanel panel, String user) {
         this.user=user;
         this.panel=panel;
         fon=new Font("Dialog", Font.BOLD, 22);
@@ -103,37 +92,35 @@ public class cart implements ActionListener {
         btn_delete.setForeground(Color.white);
         btn_delete.addActionListener(this);
         panel.add(btn_delete);
-        //del(panel,user);
-    }*/
-
-    public cart(JPanel panel_cart) {
+        del(panel,user);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==btn_delete) {
             try {
                 DbOperation db=new DbOperation();
-                String sql = "DELETE FROM buysell WHERE id='"+txt_id.getText()+"'";
+                String sql = "DELETE FROM product WHERE id='"+txt_id.getText()+"'";
                 int rowsDeleted = db.executeDelete(sql);
                 model = (DefaultTableModel) jt.getModel();
                 if (rowsDeleted > 0) {
-                    JOptionPane.showMessageDialog(btn_delete, "Successfully deleted");
+                    JOptionPane.showMessageDialog(btn_delete, "Juice has been removed from your cart :'(");
                     txt_id.setText("");
                     panel.removeAll();
                     panel.repaint();
                     panel.revalidate();
-                    new cart(panel);
-                    //del(panel,user);
+                    new cart(panel,user);
+                    del(panel,user);
                 }
             }
             catch(Exception ex) {
                 ex.printStackTrace();
-                JOptionPane.showMessageDialog(btn_delete, "ID not found.");
+                JOptionPane.showMessageDialog(btn_delete, "No such number exist. Please check again.");
             }
         }
     }
 }
+
+
 
 
 
