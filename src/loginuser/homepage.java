@@ -255,12 +255,15 @@ public class homepage implements ActionListener {
 
             productData user= new productData(username,product_1,product_p1);
 
+            System.out.println(user.getUsername());
+            System.out.println(user.getProduct_1());
+
 
                 DbOperation db=new DbOperation();
                 String query="insert into product(username,product_name,price)"
                         + " values('"+user.getUsername()+"','"+user.getProduct_1()+"','"+user.getProduct_p1()+"')";
 
-
+                int ans = db.insert(query);
 
 
 
