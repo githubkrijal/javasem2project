@@ -3,29 +3,30 @@ package loginuser;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
 import javax.swing.JLabel;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
 import java.util.Objects;
 
-public class homepage implements ActionListener {
-    DefaultTableModel model = new DefaultTableModel();
-    JTable jt = new JTable(model);
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
-    Font fon1, fon2, fon3, fon5;
-    JLabel lbl_product1, lbl_profile_heading, lbl_fname, lbl_lname, lbl_username, lbl_email, lbl_gender, lbl_pass, lbl_cpass, lbl_imgpro;
+public class homepage implements ActionListener {
+    Font fon1, fon2, fon6, fon5;
+    JLabel lbl_product1, lbl_productp1, lbl_profile_heading, lbl_fname, lbl_lname, lbl_username,
+            lbl_email, lbl_gender, lbl_pass, lbl_cpass, lbl_imgpro;
     ImageIcon product1, product2, product3, product4, product5, product6, product7, product8, product9, product10;
-    JButton btn_update, btn_product1, btn_product2, btn_product3, btn_product4, btn_product5, btn_product6, btn_product7, btn_product8, btn_product9, btn_product10;
+    JButton btn_update, btn_product1, btn_product2, btn_product3, btn_product4, btn_product5,
+            btn_product6, btn_product7, btn_product8, btn_product9, btn_product10;
     String user;
 
-    public homepage(JPanel panel) {
+    public homepage(JPanel panel,String user) {
+        this.user = user;
         fon5 = new Font("algerian", Font.BOLD, 25);
+        fon1 = new Font("algerian", Font.BOLD, 20);
+        fon6 = new Font("algerian", Font.BOLD, 15);
 
 
         product1 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
@@ -39,12 +40,18 @@ public class homepage implements ActionListener {
         lbl_product1.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product1);
 
+        lbl_productp1 = new JLabel("Price: 10$");
+        lbl_productp1.setFont(fon6);
+        lbl_productp1.setBounds(40, 205, 190, 40);
+        lbl_productp1.setForeground(new Color(255, 255, 200));
+        panel.add(lbl_productp1);
+
         btn_product1 = new JButton("Add To Cart");
         btn_product1.setFont(fon1);
         btn_product1.setBackground(new Color(11, 135, 15));
         btn_product1.setBorder(new LineBorder(Color.green, 4));
         btn_product1.setForeground(new Color(255, 255, 255));
-        btn_product1.setBounds(30, 220, 190, 50);
+        btn_product1.setBounds(30, 242, 190, 50);
         btn_product1.addActionListener(this);
         panel.add(btn_product1);
 
@@ -229,6 +236,64 @@ public class homepage implements ActionListener {
         panel.add(btn_product10);
 
 
+    }
+
+    //public homepage(JPanel panel_purchase) {
+   // }
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == btn_product1) {
+            String username=user;
+            String product_1 = lbl_product1.getText();
+            String product_p1 = lbl_productp1.getText();
+
+            System.out.println(product_1);
+            System.out.println(product_p1);
+
+
+            productData user= new productData(username,product_1,product_p1);
+
+
+                DbOperation db=new DbOperation();
+                String query="insert into product(username,product_name,price)"
+                        + " values('"+user.getUsername()+"','"+user.getProduct_1()+"','"+user.getProduct_p1()+"')";
+
+
+
+
+
+        }
+    }
+
+}
+
+
+
+
+
+
+    /*String query="insert into buysell(username,mobilename,company,ram,storage,price,processor,camera,contact)"
+            + " values('"+data.getUsername()+"','"+data.getMobilename()+"',"
+            + "'"+data.getCompany()+"','"+data.getRam()+"',"
+            + "'"+data.getStorage()+"','"+data.getPrice()+"',"
+            + "'"+data.getProcessor()+"','"+data.getCamera()+"','"+data.getContact()+"')";
+    int ans= db.insert(query);
+	        	if (ans>0) {
+                        JOptionPane.showMessageDialog(btn_sell, "Moblie successfully added");*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -268,16 +333,5 @@ public class homepage implements ActionListener {
         JScrollPane pg = new JScrollPane(jt);
         pg.setBounds(0,0,1220,480);
         panel.add(pg);*/
-    }
 
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == btn_product1) {
-            String product_1 = lbl_product1.getText();
-            System.out.println(product_1);
-
-        }
-    }
-
-}

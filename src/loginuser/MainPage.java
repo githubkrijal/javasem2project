@@ -80,7 +80,7 @@ public class MainPage implements ActionListener{
         }
 
 
-        lbl_topic=new JLabel("Juicy Juice");
+        lbl_topic=new JLabel("Juice Factory");
         lbl_topic.setBounds(30,0,450,70);
         lbl_topic.setFont(fon1);
         panel1.add(lbl_topic);
@@ -102,7 +102,7 @@ public class MainPage implements ActionListener{
         panel_purchase.setBounds(0,100,1175,705);
         panel_purchase.setBackground(new Color(68,2,150));
         panel2.add(panel_purchase);
-        new homepage(panel_purchase);
+        new homepage(panel_purchase,user);
 
         btn_cart=new JButton("Cart");
         btn_cart.setFont(fon3);
@@ -167,7 +167,7 @@ public class MainPage implements ActionListener{
             btn_profile.setBackground(new Color(102,111,247));
             btn_purchase.setForeground(new Color(5,188,5));
             btn_purchase.setBackground(new Color(210,241,245));
-            new homepage(panel_purchase);
+            new homepage(panel_purchase,user);
         }
 
         else if(e.getSource()==btn_profile){
