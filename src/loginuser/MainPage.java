@@ -5,11 +5,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 import javax.swing.border.LineBorder;
 
@@ -19,7 +15,7 @@ public class MainPage implements ActionListener{
     Font fon1,fon2,fon3,fon4;
     ImageIcon image_bg, imageprofile_bg,gender_pic;
     JLabel lbl_img,lbl_topic,lbl_gender_pic,lbl_welcome,lbl_imgpro;
-    JButton btn_purchase,btn_profile,btn_cart;
+    JButton btn_purchase,btn_profile,btn_cart,btn_logout;
     String user;
     String gender,gender_img;
     String fname;
@@ -116,9 +112,10 @@ public class MainPage implements ActionListener{
         panel_cart= new JPanel();
         panel_cart.setLayout(null);
         panel_cart.setLocation(0, 0);
-        panel_cart.setBounds(0,100,1095,640);
+        panel_cart.setBounds(0,100,1175,705);
         panel_cart.setBackground(new Color(68,2,150));
         panel2.add(panel_cart);
+        new cart(panel_cart,user);
 
 
         btn_profile=new JButton("Profile");
@@ -138,6 +135,14 @@ public class MainPage implements ActionListener{
         panel_profile.setBackground(new Color(68,2,150));
         panel2.add(panel_profile);
 
+        btn_logout = new JButton("Logout");
+        btn_logout.setFont(fon2);
+        btn_logout.setBackground(new Color(255, 0, 0));
+        btn_logout.setBorder(new LineBorder(Color.red, 4));
+        btn_logout.setForeground(new Color(255, 255, 255));
+        btn_logout.setBounds(30, 650, 190, 45);
+        btn_logout.addActionListener(this);
+        panel.add(btn_logout);
 
 
 
@@ -146,11 +151,6 @@ public class MainPage implements ActionListener{
         lbl_img.setBounds(0,0,1440,805);
         panel.add(lbl_img);
 
-        /*fr.setBounds(100, 100, 100, 1000);
-        fr.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        fr.setLayout(null);
-        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fr.setVisible(true);*/
 
         fr.setSize(1440,805);
         fr.setLayout(null);
@@ -161,38 +161,46 @@ public class MainPage implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==btn_purchase) {
             panel_profile.setBounds(0,0,0,0);
+            panel_cart.setBounds(0,0,0,0);
             panel_purchase.setBounds(0,100,1175,705);
             btn_profile.setForeground(Color.white);
-            btn_profile.setBackground(new Color(102,111,247));
             btn_purchase.setForeground(new Color(5,188,5));
-            btn_purchase.setBackground(new Color(210,241,245));
+            btn_cart.setForeground(Color.white);
             new homepage(panel_purchase,user);
         }
 
         else if(e.getSource()==btn_profile){
 
             panel_purchase.setBounds(0,0,0,0);
+            panel_cart.setBounds(0,0,0,0);
             panel_profile.setBounds(0,100,1175,705);
             btn_profile.setForeground(new Color(5,188,5));
-            btn_profile.setBackground(new Color(210,241,245));
+            btn_cart.setForeground(Color.white);
             btn_purchase.setForeground(Color.white);
-            btn_purchase.setBackground(new Color(102,111,247));
+
             new profile(panel_profile,user);
         }
 
         else if(e.getSource()==btn_cart) {
-            btn_purchase.setForeground(Color.white);
-            btn_profile.setForeground(Color.white);
-            btn_cart.setForeground(Color.green);
             panel_purchase.setBounds(0,0,0,0);
             panel_profile.setBounds(0,0,0,0);
-            panel_cart.setBounds(90,210,1180,400);
+            panel_cart.setBounds(0,100,1175,600);
+            btn_purchase.setForeground(new Color(255,255,255));
+            btn_profile.setForeground(new Color(255,255,255));
+            btn_cart.setForeground(new Color(5,188,5));
             panel_cart.removeAll();
             panel_cart.repaint();
             panel_cart.revalidate();
             new cart(panel_cart,user);
         }
 
+        else if (e.getSource() == btn_logout) {
+            fr.dispose();
+            new LoginPage();
+            {
+                JOptionPane.showMessageDialog(fr, "You logged out");
+            }
+        }
 
     }
 }

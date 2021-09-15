@@ -1,5 +1,6 @@
 package loginuser;
 
+import javax.swing.border.LineBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import java.awt.event.ActionEvent;
@@ -20,7 +21,7 @@ public class cart implements ActionListener {
     JLabel lbl_topic,lbl_select;
     JTextField txt_id;
     JButton btn_delete;
-    Font fon,fon1,fon3;
+    Font fon,fon1,fon3,fon5;
     String user;
     JPanel panel;
     JTable jt;
@@ -37,15 +38,16 @@ public class cart implements ActionListener {
         model = (DefaultTableModel) jt.getModel();
         jt.setFont(fon1);
         jt.setRowHeight(40);
-        jt.setBackground(new Color(211,244,252));
-        model.addColumn("Id");
+        jt.setBackground(new Color(61,150,255));
+
+        model.addColumn("Item number");
         model.addColumn("Product Name");
         model.addColumn("Price");
 
 
         JTableHeader header = jt.getTableHeader();
         header.setFont(fon);
-        header.setBackground(Color.gray);
+        header.setBackground(new Color(62,40,90));
         header.setForeground(Color.white);
         jt.getTableHeader().setPreferredSize(new Dimension(100,50));
         try {
@@ -63,7 +65,7 @@ public class cart implements ActionListener {
             System.out.println(e.getMessage());
         }
         pg = new JScrollPane(jt);
-        pg.setBounds(0,150,1000,450);
+        pg.setBounds(10,50,700,800);
         panel.add(pg);
     }
 
@@ -73,26 +75,32 @@ public class cart implements ActionListener {
         fon=new Font("Dialog", Font.BOLD, 22);
         fon1=new Font("Serif", Font.BOLD, 18);
         fon3=new Font("Serif", Font.BOLD, 30);
+        fon5 = new Font("algerian", Font.BOLD, 25);
 
-        lbl_topic=new JLabel("Type id that you want to delete");
-        lbl_topic.setBounds(430,0,500,50);
-        lbl_topic.setFont(fon3);
+
+        lbl_topic = new JLabel("Remove item from cart:");
+        lbl_topic.setFont(fon5);
+        lbl_topic.setBounds(750, 200, 500, 40);
+        lbl_topic.setForeground(new Color(255, 255, 200));
         panel.add(lbl_topic);
 
         txt_id=new JTextField();
-        txt_id.setFont(fon1);
-        txt_id.setBounds(550,50,170,45);
-        txt_id.setBackground(new Color(245,254,255));
+        txt_id.setFont(fon5);
+        txt_id.setBounds(825,250,170,45);
+        txt_id.setBackground(new Color(255,255,255));
         panel.add(txt_id);
 
-        btn_delete =new JButton("DELETE");
-        btn_delete.setFont(fon);
-        btn_delete.setBounds(520,100,220,45);
-        btn_delete.setBackground(Color.red);
-        btn_delete.setForeground(Color.white);
+        btn_delete = new JButton("DELETE");
+        btn_delete.setFont(fon5);
+        btn_delete.setBackground(new Color(11, 135, 15));
+        btn_delete.setBorder(new LineBorder(Color.red, 4));
+        btn_delete.setForeground(Color.red);
+        btn_delete.setBounds(825, 325, 190, 50);
         btn_delete.addActionListener(this);
         panel.add(btn_delete);
         del(panel,user);
+
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -114,7 +122,7 @@ public class cart implements ActionListener {
             }
             catch(Exception ex) {
                 ex.printStackTrace();
-                JOptionPane.showMessageDialog(btn_delete, "No such number exist. Please check again.");
+                JOptionPane.showMessageDialog(btn_delete, "No such catagory exist. Please check again.");
             }
         }
     }

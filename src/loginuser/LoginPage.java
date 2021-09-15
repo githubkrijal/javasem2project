@@ -130,7 +130,6 @@ public class LoginPage implements ActionListener {
                     JOptionPane.showMessageDialog(btn_login, "Login successful!");
                     fr.dispose();
 
-
                     new MainPage(username, gender, fname);
                 }
                 else if(username.length()==0 && password.length()==0) {
