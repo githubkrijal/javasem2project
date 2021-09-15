@@ -169,18 +169,6 @@ public class MainPage implements ActionListener{
             new homepage(panel_purchase,user);
         }
 
-        else if(e.getSource()==btn_profile){
-
-            panel_purchase.setBounds(0,0,0,0);
-            panel_cart.setBounds(0,0,0,0);
-            panel_profile.setBounds(0,100,1175,705);
-            btn_profile.setForeground(new Color(5,188,5));
-            btn_cart.setForeground(Color.white);
-            btn_purchase.setForeground(Color.white);
-
-            new profile(panel_profile,user);
-        }
-
         else if(e.getSource()==btn_cart) {
             panel_purchase.setBounds(0,0,0,0);
             panel_profile.setBounds(0,0,0,0);
@@ -192,6 +180,18 @@ public class MainPage implements ActionListener{
             panel_cart.repaint();
             panel_cart.revalidate();
             new cart(panel_cart,user);
+        }
+
+        else if(e.getSource()==btn_profile){
+
+            panel_purchase.setBounds(0,0,0,0);
+            panel_cart.setBounds(0,0,0,0);
+            panel_profile.setBounds(0,100,1175,705);
+            btn_profile.setForeground(new Color(5,188,5));
+            btn_cart.setForeground(Color.white);
+            btn_purchase.setForeground(Color.white);
+
+            new profile(panel_profile,user);
         }
 
         else if (e.getSource() == btn_logout) {

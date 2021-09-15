@@ -31,9 +31,11 @@ public class DbOperation {
 
     public int insert(String query) {
         try {
-
             val = st.executeUpdate(query);
-        } catch (SQLException throwables) {
+            con.commit();
+            con.close();
+        }
+        catch (SQLException throwables) {
             throwables.printStackTrace();
 
         }
@@ -56,7 +58,8 @@ public class DbOperation {
     public int Update(String query) {
         try {
             values = st.executeUpdate(query);
-        } catch (SQLException throwables) {
+        }
+        catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         return values;
@@ -66,7 +69,8 @@ public class DbOperation {
     public int executeDelete(String sql) {
         try {
             values = st.executeUpdate(sql);
-        } catch (SQLException throwables) {
+        }
+        catch (SQLException throwables) {
             throwables.printStackTrace();
         }
         // TODO Auto-generated method stub
