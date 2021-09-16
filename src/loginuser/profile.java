@@ -202,7 +202,7 @@ public class profile implements ActionListener {
             }
 
             try {
-                String query="update register set fname='"+txt_fname.getText()+"',"
+                String query="update registration_tbl set fname='"+txt_fname.getText()+"', lname='"+txt_lname.getText()+"',"
                         + "email='"+txt_email.getText()+"',gender='"+gender+"',password='"+txt_pass.getText()+"'"
                         + ",cpassword='"+txt_cpass.getText()+"' where username='"+user+"'";
                 DbOperation db=new DbOperation();

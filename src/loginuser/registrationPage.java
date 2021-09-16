@@ -237,7 +237,7 @@ public class registrationPage implements ActionListener {
                 JOptionPane.showMessageDialog(btn_register, "Your password and confirm password did not match.");
             }
             else if(agree.isSelected()==false) {
-                JOptionPane.showMessageDialog(btn_register, "Please agree the tearms and condition.");
+                JOptionPane.showMessageDialog(btn_register, "Please agree the terms and condition.");
             }
             else  {
                 DbOperation db=new DbOperation();

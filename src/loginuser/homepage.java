@@ -30,7 +30,7 @@ public class homepage implements ActionListener {
         fon6 = new Font("algerian", Font.BOLD, 15);
 
 
-        product1 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product1 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item1.png")));
         lbl_imgpro = new JLabel(product1);
         lbl_imgpro.setBounds(30, 20, 190, 160);
         panel.add(lbl_imgpro);
@@ -56,7 +56,7 @@ public class homepage implements ActionListener {
         btn_product1.addActionListener(this);
         panel.add(btn_product1);
 
-        product2 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item3.png")));
+        product2 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
         lbl_imgpro = new JLabel(product2);
         lbl_imgpro.setBounds(250, 20, 190, 160);
         panel.add(lbl_imgpro);
@@ -82,7 +82,7 @@ public class homepage implements ActionListener {
         btn_product2.addActionListener(this);
         panel.add(btn_product2);
 
-        product3 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item1.png")));
+        product3 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item3.png")));
         lbl_imgpro = new JLabel(product3);
         lbl_imgpro.setBounds(470, 20, 190, 160);
         panel.add(lbl_imgpro);
@@ -108,7 +108,7 @@ public class homepage implements ActionListener {
         btn_product3.addActionListener(this);
         panel.add(btn_product3);
 
-        product4 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product4 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item4.png")));
         lbl_imgpro = new JLabel(product4);
         lbl_imgpro.setBounds(700, 20, 190, 160);
         panel.add(lbl_imgpro);
@@ -134,7 +134,7 @@ public class homepage implements ActionListener {
         btn_product4.addActionListener(this);
         panel.add(btn_product4);
 
-        product5 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product5 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item5.png")));
         lbl_imgpro = new JLabel(product5);
         lbl_imgpro.setBounds(920, 20, 190, 160);
         panel.add(lbl_imgpro);
@@ -160,7 +160,7 @@ public class homepage implements ActionListener {
         btn_product5.addActionListener(this);
         panel.add(btn_product5);
 
-        product6 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product6 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item6.png")));
         lbl_imgpro = new JLabel(product6);
         lbl_imgpro.setBounds(30, 350, 190, 160);
         panel.add(lbl_imgpro);
@@ -186,7 +186,7 @@ public class homepage implements ActionListener {
         btn_product6.addActionListener(this);
         panel.add(btn_product6);
 
-        product7 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product7 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item7.png")));
         lbl_imgpro = new JLabel(product7);
         lbl_imgpro.setBounds(250, 350, 190, 160);
         panel.add(lbl_imgpro);
@@ -212,7 +212,7 @@ public class homepage implements ActionListener {
         btn_product7.addActionListener(this);
         panel.add(btn_product7);
 
-        product8 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product8 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item8.png")));
         lbl_imgpro = new JLabel(product8);
         lbl_imgpro.setBounds(470, 350, 190, 160);
         panel.add(lbl_imgpro);
@@ -223,7 +223,7 @@ public class homepage implements ActionListener {
         lbl_product8.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product8);
 
-        lbl_productp8 = new JLabel("Price: 17$");
+        lbl_productp8 = new JLabel("Price: $17");
         lbl_productp8.setFont(fon6);
         lbl_productp8.setBounds(520, 535, 190, 40);
         lbl_productp8.setForeground(new Color(255, 255, 200));
@@ -238,7 +238,7 @@ public class homepage implements ActionListener {
         btn_product8.addActionListener(this);
         panel.add(btn_product8);
 
-        product9 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product9 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item9.png")));
         lbl_imgpro = new JLabel(product9);
         lbl_imgpro.setBounds(700, 350, 190, 160);
         panel.add(lbl_imgpro);
@@ -249,7 +249,7 @@ public class homepage implements ActionListener {
         lbl_product9.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product9);
 
-        lbl_productp9 = new JLabel("Price: 16$");
+        lbl_productp9 = new JLabel("Price: $16");
         lbl_productp9.setFont(fon6);
         lbl_productp9.setBounds(750, 535, 190, 40);
         lbl_productp9.setForeground(new Color(255, 255, 200));
@@ -264,7 +264,7 @@ public class homepage implements ActionListener {
         btn_product9.addActionListener(this);
         panel.add(btn_product9);
 
-        product10 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item2.png")));
+        product10 = new ImageIcon(Objects.requireNonNull(getClass().getResource("item10.png")));
         lbl_imgpro = new JLabel(product10);
         lbl_imgpro.setBounds(920, 350, 190, 160);
         panel.add(lbl_imgpro);
