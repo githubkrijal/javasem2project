@@ -246,7 +246,7 @@ public class registrationPage implements ActionListener {
             {
                 JOptionPane.showMessageDialog(btn_register, "PLease select your gender");
             }
-            else if(user.getPass().equals(user.getcPass()) != true) {
+            else if(txt_pass.getText().equals(txt_cpass.getText()) != true) {
                 JOptionPane.showMessageDialog(btn_register, "Your password and confirm password did not match");
             }
             else if(agree.isSelected()==false) {
