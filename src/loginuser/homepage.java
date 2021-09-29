@@ -14,12 +14,12 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class homepage implements ActionListener {
-    Font fon1, fon2, fon6, fon5;
+    Font fon1, fon6, fon5;
     JLabel lbl_product1, lbl_productp1, lbl_productp2, lbl_product2, lbl_product3, lbl_productp3, lbl_product4,lbl_productp4,
             lbl_product5, lbl_productp5, lbl_productp6, lbl_product6, lbl_product7, lbl_productp7, lbl_product8,lbl_productp8,
             lbl_product9, lbl_productp9, lbl_productp10, lbl_product10, lbl_imgpro;
     ImageIcon product1, product2, product3, product4, product5, product6, product7, product8, product9, product10;
-    JButton btn_update, btn_product1, btn_product2, btn_product3, btn_product4, btn_product5,
+    JButton btn_product1, btn_product2, btn_product3, btn_product4, btn_product5,
             btn_product6, btn_product7, btn_product8, btn_product9, btn_product10;
     String user;
 
@@ -35,7 +35,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(30, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product1 = new JLabel("Milk shake");
+        lbl_product1 = new JLabel("Can orange juice");
         lbl_product1.setFont(fon5);
         lbl_product1.setBounds(30, 180, 190, 40);
         lbl_product1.setForeground(new Color(255, 255, 200));
@@ -46,6 +46,7 @@ public class homepage implements ActionListener {
         lbl_productp1.setBounds(80, 205, 190, 40);
         lbl_productp1.setForeground(new Color(255, 255, 200));
         panel.add(lbl_productp1);
+
 
         btn_product1 = new JButton("Add To Cart");
         btn_product1.setFont(fon1);

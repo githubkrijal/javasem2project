@@ -11,14 +11,12 @@ import javax.swing.border.LineBorder;
 
 public class MainPage implements ActionListener{
     JFrame fr;
-    JPanel panel,panel1,panel2,panel_purchase,panel_profile,panel_cart;
+    JPanel panel,panel1,panel2,panel_purchase,panel_profile,panel_cart,panel_order;
     Font fon1,fon2,fon3,fon4;
-    ImageIcon image_bg, imageprofile_bg,gender_pic;
-    JLabel lbl_img,lbl_topic,lbl_gender_pic,lbl_welcome,lbl_imgpro;
-    JButton btn_purchase,btn_profile,btn_cart,btn_logout;
+    ImageIcon image_bg,gender_pic;
+    JLabel lbl_img,lbl_topic,lbl_gender_pic,lbl_welcome;
+    JButton btn_purchase,btn_profile,btn_cart,btn_logout,btn_order;
     String user;
-    String gender,gender_img;
-    String fname;
 
     public MainPage(String user, String gender,String fname){
         this.user=user;
@@ -84,13 +82,12 @@ public class MainPage implements ActionListener{
         //Buttons
         btn_purchase=new JButton("Home");
         btn_purchase.setFont(fon3);
-        btn_purchase.setBackground(new Color(11,135,15));
         btn_purchase.setBorder(new LineBorder(Color.green,4));
         btn_purchase.setForeground(new Color(255,255,255));
+        btn_purchase.setForeground(new Color(5,188,5));
         btn_purchase.setBounds(30,100,190,50);
         btn_purchase.addActionListener(this);
         panel.add(btn_purchase);
-
 
         panel_purchase= new JPanel();
         panel_purchase.setLayout(null);
@@ -115,7 +112,6 @@ public class MainPage implements ActionListener{
         panel_cart.setBounds(0,100,1175,705);
         panel_cart.setBackground(new Color(68,2,150));
         panel2.add(panel_cart);
-        new cart(panel_cart,user);
 
 
         btn_profile=new JButton("Profile");
@@ -134,6 +130,23 @@ public class MainPage implements ActionListener{
         panel_profile.setBounds(0,100,1095,640);
         panel_profile.setBackground(new Color(68,2,150));
         panel2.add(panel_profile);
+
+        btn_order=new JButton("Orders");
+        btn_order.setFont(fon3);
+        btn_order.setBackground(new Color(11,135,15));
+        btn_order.setBorder(new LineBorder(Color.green,4));
+        btn_order.setForeground(new Color(255,255,255));
+        btn_order.setBounds(30,400,190,50);
+        btn_order.addActionListener(this);
+        panel.add(btn_order);
+
+        panel_order= new JPanel();
+        panel_order.setLayout(null);
+        panel_order.setLocation(0, 0);
+        panel_order.setBounds(0,100,1175,705);
+        panel_order.setBackground(new Color(68,2,150));
+        panel2.add(panel_order);
+
 
         btn_logout = new JButton("Logout");
         btn_logout.setFont(fon2);
@@ -162,20 +175,24 @@ public class MainPage implements ActionListener{
         if (e.getSource()==btn_purchase) {
             panel_profile.setBounds(0,0,0,0);
             panel_cart.setBounds(0,0,0,0);
+            panel_order.setBounds(0,0,0,0);
             panel_purchase.setBounds(0,100,1175,705);
             btn_profile.setForeground(Color.white);
             btn_purchase.setForeground(new Color(5,188,5));
             btn_cart.setForeground(Color.white);
+            btn_order.setForeground(Color.white);
             new homepage(panel_purchase,user);
         }
 
         else if(e.getSource()==btn_cart) {
             panel_purchase.setBounds(0,0,0,0);
             panel_profile.setBounds(0,0,0,0);
+            panel_order.setBounds(0,0,0,0);
             panel_cart.setBounds(0,100,1175,600);
             btn_purchase.setForeground(new Color(255,255,255));
             btn_profile.setForeground(new Color(255,255,255));
             btn_cart.setForeground(new Color(5,188,5));
+            btn_order.setForeground(Color.white);
             panel_cart.removeAll();
             panel_cart.repaint();
             panel_cart.revalidate();
@@ -186,12 +203,25 @@ public class MainPage implements ActionListener{
 
             panel_purchase.setBounds(0,0,0,0);
             panel_cart.setBounds(0,0,0,0);
+            panel_order.setBounds(0,0,0,0);
             panel_profile.setBounds(0,100,1175,705);
             btn_profile.setForeground(new Color(5,188,5));
             btn_cart.setForeground(Color.white);
+            btn_order.setForeground(Color.white);
             btn_purchase.setForeground(Color.white);
-
             new profile(panel_profile,user);
+        }
+
+        else if(e.getSource()==btn_order) {
+            panel_purchase.setBounds(0,0,0,0);
+            panel_profile.setBounds(0,0,0,0);
+            panel_cart.setBounds(0,0,0,0);
+            panel_order.setBounds(0,100,1175,600);
+            btn_purchase.setForeground(new Color(255,255,255));
+            btn_profile.setForeground(new Color(255,255,255));
+            btn_order.setForeground(new Color(5,188,5));
+            btn_cart.setForeground(Color.white);
+            new orders(panel_order,user);
         }
 
         else if (e.getSource() == btn_logout) {
