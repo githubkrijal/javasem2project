@@ -75,7 +75,7 @@ public class MainPage implements ActionListener{
 
 
         lbl_topic=new JLabel("Juice Factory");
-        lbl_topic.setBounds(30,0,450,70);
+        lbl_topic.setBounds(60,0,450,70);
         lbl_topic.setFont(fon1);
         panel1.add(lbl_topic);
 

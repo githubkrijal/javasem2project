@@ -88,7 +88,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(470, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product3 = new JLabel("Orange milk shake");
+        lbl_product3 = new JLabel("Orange shake");
         lbl_product3.setFont(fon5);
         lbl_product3.setBounds(470, 180, 190, 40);
         lbl_product3.setForeground(new Color(255, 255, 200));
@@ -140,7 +140,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(920, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product5 = new JLabel("Mango Juice");
+        lbl_product5 = new JLabel("Lemonade");
         lbl_product5.setFont(fon5);
         lbl_product5.setBounds(920, 180, 190, 40);
         lbl_product5.setForeground(new Color(255, 255, 200));
@@ -244,7 +244,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(700, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product9 = new JLabel("Blue Berry shake");
+        lbl_product9 = new JLabel("Blue Berry");
         lbl_product9.setFont(fon5);
         lbl_product9.setBounds(700, 510, 190, 40);
         lbl_product9.setForeground(new Color(255, 255, 200));
@@ -270,7 +270,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(920, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product10 = new JLabel("Green Apple Wine");
+        lbl_product10 = new JLabel("Whipped cream coffee");
         lbl_product10.setFont(fon5);
         lbl_product10.setBounds(920, 510, 190, 40);
         lbl_product10.setForeground(new Color(255, 255, 200));

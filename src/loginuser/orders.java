@@ -73,35 +73,34 @@ public class orders implements ActionListener {
         fon3 = new Font("Serif", Font.BOLD, 30);
         fon5 = new Font("algerian", Font.BOLD, 25);
 
+        btn_delete = new JButton(" UPDATE ORDER ");
+        btn_delete.setFont(fon5);
+        btn_delete.setBackground(new Color(11, 135, 15));
+        btn_delete.setBorder(new LineBorder(Color.green, 4));
+        btn_delete.setForeground(Color.green);
+        btn_delete.setBounds(810, 125, 260, 50);
+        btn_delete.addActionListener(this);
+        panel.add(btn_delete);
+        del(panel, user);
 
-        lbl_topic = new JLabel("Cancel order:");
+        lbl_topic = new JLabel("Cancel order :");
         lbl_topic.setFont(fon5);
-        lbl_topic.setBounds(780, 400, 500, 40);
+        lbl_topic.setBounds(860, 400, 500, 40);
         lbl_topic.setForeground(new Color(255, 255, 200));
         panel.add(lbl_topic);
 
         txt_id = new JTextField();
         txt_id.setFont(fon5);
-        txt_id.setBounds(865, 250, 170, 45);
+        txt_id.setBounds(865, 450, 170, 45);
         txt_id.setBackground(new Color(255, 255, 255));
         panel.add(txt_id);
-
-        btn_delete = new JButton("UPDATE ORDER");
-        btn_delete.setFont(fon5);
-        btn_delete.setBackground(new Color(11, 135, 15));
-        btn_delete.setBorder(new LineBorder(Color.green, 4));
-        btn_delete.setForeground(Color.green);
-        btn_delete.setBounds(855, 150, 250, 50);
-        btn_delete.addActionListener(this);
-        panel.add(btn_delete);
-        del(panel, user);
 
         btn_delete2 = new JButton("CANCEL ORDER");
         btn_delete2.setFont(fon5);
         btn_delete2.setBackground(new Color(11, 135, 15));
         btn_delete2.setBorder(new LineBorder(Color.red, 4));
         btn_delete2.setForeground(Color.red);
-        btn_delete2.setBounds(855, 525, 250, 50);
+        btn_delete2.setBounds(825, 525, 250, 50);
         btn_delete2.addActionListener(this);
         panel.add(btn_delete2);
         del(panel, user);

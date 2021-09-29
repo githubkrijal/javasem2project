@@ -78,13 +78,13 @@ public class cart implements ActionListener {
 
         lbl_topic = new JLabel("Remove item from cart:");
         lbl_topic.setFont(fon5);
-        lbl_topic.setBounds(780, 200, 500, 40);
+        lbl_topic.setBounds(780, 400, 500, 40);
         lbl_topic.setForeground(new Color(255, 255, 200));
         panel.add(lbl_topic);
 
         txt_id=new JTextField();
         txt_id.setFont(fon5);
-        txt_id.setBounds(865,250,170,45);
+        txt_id.setBounds(865,450,170,45);
         txt_id.setBackground(new Color(255,255,255));
         panel.add(txt_id);
 
@@ -93,7 +93,7 @@ public class cart implements ActionListener {
         btn_delete.setBackground(new Color(11, 135, 15));
         btn_delete.setBorder(new LineBorder(Color.red, 4));
         btn_delete.setForeground(Color.red);
-        btn_delete.setBounds(855, 325, 190, 50);
+        btn_delete.setBounds(855, 525, 190, 50);
         btn_delete.addActionListener(this);
         panel.add(btn_delete);
         del(panel,user);
@@ -103,11 +103,8 @@ public class cart implements ActionListener {
         btn_orderCart.setBackground(new Color(11, 135, 15));
         btn_orderCart.setBorder(new LineBorder(Color.green, 4));
         btn_orderCart.setForeground(Color.green);
-        btn_orderCart.setBounds(855, 525, 200, 50);
+        btn_orderCart.setBounds(855, 125, 200, 50);
         btn_orderCart.addActionListener(this);
-        //panel_order.removeAll();
-        //panel_order.repaint();
-        //panel_order.revalidate();
         panel.add(btn_orderCart);
 
 

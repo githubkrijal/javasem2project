@@ -14,8 +14,8 @@ import javax.swing.border.LineBorder;
 
 public class profile implements ActionListener {
     Font fon1,fon2,fon3,fon4;
-    JLabel lbl_profile_heading,lbl_fname, lbl_lname, lbl_username,lbl_email,lbl_gender,lbl_pass,lbl_cpass,lbl_imgpro;
-    JTextField txt_fname, txt_lname, txt_username,txt_email,txt_pass,txt_cpass;
+    JLabel lbl_profile_heading,lbl_fname, lbl_lname,lbl_email,lbl_gender,lbl_pass,lbl_cpass,lbl_imgpro;
+    JTextField txt_fname, txt_lname,txt_email,txt_pass,txt_cpass;
     JRadioButton regMale,regFemale;
     ImageIcon imageprofile_bg;
     JButton btn_update;
@@ -105,14 +105,8 @@ public class profile implements ActionListener {
                 txt_lname = new JTextField(rs.getString("lname"));
                 txt_lname.setFont(fon2);
                 txt_lname.setBackground(new Color(220, 239, 238));
-                txt_lname.setBounds(490, 203, 200, 35);
+                txt_lname.setBounds(490, 243, 200, 35);
                 panel.add(txt_lname);
-
-                txt_username = new JTextField(rs.getString("username"));
-                txt_username.setFont(fon2);
-                txt_username.setBackground(new Color(220, 239, 238));
-                txt_username.setBounds(490, 243, 200, 35);
-                panel.add(txt_username);
 
                 txt_email = new JTextField(rs.getString("email"));
                 txt_email.setFont(fon2);
