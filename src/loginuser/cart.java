@@ -18,17 +18,15 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 public class cart implements ActionListener {
-    JLabel lbl_topic,lbl_select;
+    JLabel lbl_topic;
     JTextField txt_id;
-    JButton btn_delete;
+    JButton btn_delete,btn_orderCart;
     Font fon,fon1,fon3,fon5;
     String user;
-    JPanel panel;
+    JPanel panel,panel_orderCart,panel_order;
     JTable jt;
     DefaultTableModel model;
     JScrollPane pg;
-
-
 
 
     public void del(JPanel panel,String user) {
@@ -80,13 +78,13 @@ public class cart implements ActionListener {
 
         lbl_topic = new JLabel("Remove item from cart:");
         lbl_topic.setFont(fon5);
-        lbl_topic.setBounds(750, 200, 500, 40);
+        lbl_topic.setBounds(780, 200, 500, 40);
         lbl_topic.setForeground(new Color(255, 255, 200));
         panel.add(lbl_topic);
 
         txt_id=new JTextField();
         txt_id.setFont(fon5);
-        txt_id.setBounds(825,250,170,45);
+        txt_id.setBounds(865,250,170,45);
         txt_id.setBackground(new Color(255,255,255));
         panel.add(txt_id);
 
@@ -95,10 +93,31 @@ public class cart implements ActionListener {
         btn_delete.setBackground(new Color(11, 135, 15));
         btn_delete.setBorder(new LineBorder(Color.red, 4));
         btn_delete.setForeground(Color.red);
-        btn_delete.setBounds(825, 325, 190, 50);
+        btn_delete.setBounds(855, 325, 190, 50);
         btn_delete.addActionListener(this);
         panel.add(btn_delete);
         del(panel,user);
+
+        btn_orderCart = new JButton(" Purchase ");
+        btn_orderCart.setFont(fon5);
+        btn_orderCart.setBackground(new Color(11, 135, 15));
+        btn_orderCart.setBorder(new LineBorder(Color.green, 4));
+        btn_orderCart.setForeground(Color.green);
+        btn_orderCart.setBounds(855, 525, 200, 50);
+        btn_orderCart.addActionListener(this);
+        //panel_order.removeAll();
+        //panel_order.repaint();
+        //panel_order.revalidate();
+        panel.add(btn_orderCart);
+
+
+        panel_orderCart= new JPanel();
+        panel_orderCart.setLayout(null);
+        panel_orderCart.setLocation(0, 0);
+        panel_orderCart.setBounds(0,100,1175,705);
+        panel_orderCart.setBackground(new Color(68,2,150));
+        panel.add(panel_orderCart);
+
 
 
     }
@@ -118,6 +137,7 @@ public class cart implements ActionListener {
                     panel.revalidate();
                     new cart(panel,user);
                     del(panel,user);
+                    return;
                 }
             }
             catch(Exception ex) {
@@ -125,6 +145,16 @@ public class cart implements ActionListener {
                 JOptionPane.showMessageDialog(btn_delete, "No such catagory exist. Please check again.");
             }
         }
+        else if(e.getSource()==btn_orderCart) {
+
+            panel_orderCart.removeAll();
+            panel_orderCart.repaint();
+            panel_orderCart.revalidate();
+            panel.setBounds(0,100,1175,600);
+            panel_orderCart.setBounds(0,0,0,0);
+            new orders(panel_orderCart,user);
+        }
+        JOptionPane.showMessageDialog(btn_orderCart, "Juice Ordered!");
     }
 }
 
