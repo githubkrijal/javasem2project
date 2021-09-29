@@ -183,6 +183,19 @@ public class registrationPage implements ActionListener {
         fr.setLayout(null);
         fr.setVisible(true);
 
+
+
+    }
+
+    public boolean reg_test(String pass_test, String cpass_test) {
+        String pass_t="key";
+        String cpass_t="key";
+        boolean result = false;
+        if (pass_test == pass_t && cpass_test == cpass_t) {
+            result = true;
+
+        }
+        return result;
     }
 
     public static void main(String[] args) {
@@ -231,13 +244,13 @@ public class registrationPage implements ActionListener {
                     || regMale.isSelected()==false && regFemale.isSelected()==false
                     || user.getPass().length()==0 || user.getcPass().length()==0)
             {
-                JOptionPane.showMessageDialog(btn_register, "Enter all Fields completely");
+                JOptionPane.showMessageDialog(btn_register, "PLease select your gender");
             }
             else if(user.getPass().equals(user.getcPass()) != true) {
-                JOptionPane.showMessageDialog(btn_register, "Your password and confirm password did not match.");
+                JOptionPane.showMessageDialog(btn_register, "Your password and confirm password did not match");
             }
             else if(agree.isSelected()==false) {
-                JOptionPane.showMessageDialog(btn_register, "Please agree the terms and condition.");
+                JOptionPane.showMessageDialog(btn_register, "Please agree the terms and conditions");
             }
             else  {
                 DbOperation db=new DbOperation();
@@ -269,119 +282,11 @@ public class registrationPage implements ActionListener {
             }
         }
     }
+
+
+
 }
 
 
 
 
-
-
-
-
-
-
-
-/*
-package loginDemo;
-
-        import java.awt.Color;
-        import java.awt.Font;
-
-        import javax.swing.JButton;
-        import javax.swing.JFrame;
-        import javax.swing.JLabel;
-        import javax.swing.JPanel;
-        import javax.swing.JPasswordField;
-        import javax.swing.JTextField;
-
-public class RegisterPAge {
-    JFrame fr;
-    JLabel lbl_heading,lbl_fname,lbl_lname,lbl_email,lbl_pass,lbl_cpss;
-    JTextField txt_fname,txt_lname,txt_email;
-    JPasswordField txt_pass,txt_cpss;
-    JButton btn_register;
-    Font fon1,fon2;
-    JPanel panel;
-    public RegisterPAge() {
-        fr=new JFrame("Registeration");
-        fon1=new Font("areal",Font.BOLD,30);
-        fon2=new Font("areal",Font.BOLD,18);
-        lbl_heading=new JLabel("User Registration");
-        lbl_heading.setFont(fon1);
-        lbl_heading.setBounds(150,30,300,50);
-        lbl_heading.setForeground(Color.red);
-        fr.add(lbl_heading);
-
-        panel= new JPanel();
-        panel.setBounds(10,80,500,350);
-        panel.setBackground(Color.cyan);
-        panel.setLayout(null);
-        fr.add(panel);
-
-        lbl_fname=new JLabel("First name:");
-        lbl_fname.setFont(fon2);
-        lbl_fname.setBounds(50,80,300,50);
-        panel.add(lbl_fname);
-
-        txt_fname=new JTextField();
-        txt_fname.setFont(fon2);
-        txt_fname.setBounds(260,85,200,35);
-        panel.add(txt_fname);
-
-        lbl_lname=new JLabel("Last name:");
-        lbl_lname.setFont(fon2);
-        lbl_lname.setBounds(50,120,300,50);
-        panel.add(lbl_lname);
-
-        txt_lname=new JTextField();
-        txt_lname.setFont(fon2);
-        txt_lname.setBounds(260,125,200,35);
-        panel.add(txt_lname);
-
-        lbl_email=new JLabel("Email:");
-        lbl_email.setFont(fon2);
-        lbl_email.setBounds(50,160,300,50);
-        panel.add(lbl_email);
-
-        txt_email=new JTextField();
-        txt_email.setFont(fon2);
-        txt_email.setBounds(260,165,200,35);
-        panel.add(txt_email);
-
-        lbl_pass=new JLabel("Password:");
-        lbl_pass.setFont(fon2);
-        lbl_pass.setBounds(50,200,300,50);
-        panel.add(lbl_pass);
-
-        txt_pass=new JPasswordField();
-        txt_pass.setFont(fon2);
-        txt_pass.setBounds(260,205,200,35);
-        panel.add(txt_pass);
-
-        lbl_cpss=new JLabel("Confirm Password:");
-        lbl_cpss.setFont(fon2);
-        lbl_cpss.setBounds(50,240,300,50);
-        panel.add(lbl_cpss);
-
-        txt_cpss=new JPasswordField();
-        txt_cpss.setFont(fon2);
-        txt_cpss.setBounds(260,245,200,35);
-        panel.add(txt_cpss);
-
-        btn_register=new JButton("Register");
-        btn_register.setFont(fon1);
-        btn_register.setForeground(Color.green);
-        btn_register.setBounds(200,295,200,45);
-        panel.add(btn_register);
-
-        fr.setSize(600,600);
-        fr.setLayout(null);
-        fr.setVisible(true);
-        fr.setBackground(Color.YELLOW);
-
-    }
-    public static void main(String[] args) {
-        new RegisterPAge();
-    }
-}
-*/

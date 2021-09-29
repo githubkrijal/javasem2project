@@ -106,6 +106,17 @@ public class LoginPage implements ActionListener {
         fr.setLayout(null);
         fr.setVisible(true);
     }
+
+    public boolean log_test(String username, String password) {
+        String username_test="krijal";
+        String pass_test="k123";
+        boolean result = false;
+        if (username== username_test && password == pass_test) {
+            result = true;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         new LoginPage();
     }
@@ -144,5 +155,6 @@ public class LoginPage implements ActionListener {
             }
         }
     }
+
 
 }
