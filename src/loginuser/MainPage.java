@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Objects;
 
 import javax.swing.*;
 
@@ -13,8 +14,8 @@ public class MainPage implements ActionListener{
     JFrame fr;
     JPanel panel,panel1,panel2,panel_purchase,panel_profile,panel_cart,panel_order;
     Font fon1,fon2,fon3,fon4;
-    ImageIcon image_bg,gender_pic;
-    JLabel lbl_img,lbl_topic,lbl_gender_pic,lbl_welcome;
+    ImageIcon image_bg,gender_pic,logopic;
+    JLabel lbl_img,lbl_topic,lbl_gender_pic,lbl_welcome,lbl_logo;
     JButton btn_purchase,btn_profile,btn_cart,btn_logout,btn_order;
     String user;
 
@@ -131,7 +132,7 @@ public class MainPage implements ActionListener{
         panel_profile.setBackground(new Color(68,2,150));
         panel2.add(panel_profile);
 
-        btn_order=new JButton("Orders");
+        btn_order=new JButton("Order");
         btn_order.setFont(fon3);
         btn_order.setBackground(new Color(11,135,15));
         btn_order.setBorder(new LineBorder(Color.green,4));
@@ -157,7 +158,10 @@ public class MainPage implements ActionListener{
         btn_logout.addActionListener(this);
         panel.add(btn_logout);
 
-
+        logopic = new ImageIcon(Objects.requireNonNull(getClass().getResource("logo.png")));
+        lbl_logo = new JLabel(logopic);
+        lbl_logo.setBounds(30, 10, 190, 60);
+        panel.add(lbl_logo);
 
         image_bg=new ImageIcon(getClass().getResource("main_bg3.png"));
         lbl_img=new JLabel(image_bg);

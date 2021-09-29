@@ -35,7 +35,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(30, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product1 = new JLabel("Can orange juice");
+        lbl_product1 = new JLabel("Orange Can Juice");
         lbl_product1.setFont(fon5);
         lbl_product1.setBounds(30, 180, 190, 40);
         lbl_product1.setForeground(new Color(255, 255, 200));
@@ -62,7 +62,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(250, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product2 = new JLabel("Strawberry milk shake");
+        lbl_product2 = new JLabel("Strawberry Milk Shake");
         lbl_product2.setFont(fon5);
         lbl_product2.setBounds(250, 180, 190, 40);
         lbl_product2.setForeground(new Color(255, 255, 200));
@@ -88,7 +88,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(470, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product3 = new JLabel("Orange shake");
+        lbl_product3 = new JLabel("Orange Shake");
         lbl_product3.setFont(fon5);
         lbl_product3.setBounds(470, 180, 190, 40);
         lbl_product3.setForeground(new Color(255, 255, 200));
@@ -114,7 +114,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(700, 20, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product4 = new JLabel("Banana shake");
+        lbl_product4 = new JLabel("Chocolaty Shake");
         lbl_product4.setFont(fon5);
         lbl_product4.setBounds(700, 180, 190, 40);
         lbl_product4.setForeground(new Color(255, 255, 200));
@@ -142,7 +142,7 @@ public class homepage implements ActionListener {
 
         lbl_product5 = new JLabel("Lemonade");
         lbl_product5.setFont(fon5);
-        lbl_product5.setBounds(920, 180, 190, 40);
+        lbl_product5.setBounds(948, 180, 190, 40);
         lbl_product5.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product5);
 
@@ -166,13 +166,13 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(30, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product6 = new JLabel("Pop Iced Juice");
+        lbl_product6 = new JLabel("Cone Red Juice");
         lbl_product6.setFont(fon5);
         lbl_product6.setBounds(30, 510, 190, 40);
         lbl_product6.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product6);
 
-        lbl_productp6 = new JLabel("Price: $9");
+        lbl_productp6 = new JLabel("Price: $10");
         lbl_productp6.setFont(fon6);
         lbl_productp6.setBounds(80, 535, 190, 40);
         lbl_productp6.setForeground(new Color(255, 255, 200));
@@ -192,7 +192,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(250, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product7 = new JLabel("Hot milk shake");
+        lbl_product7 = new JLabel("Coconut Water");
         lbl_product7.setFont(fon5);
         lbl_product7.setBounds(250, 510, 190, 40);
         lbl_product7.setForeground(new Color(255, 255, 200));
@@ -218,9 +218,9 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(470, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product8 = new JLabel("Cup shake");
+        lbl_product8 = new JLabel("Green Coke");
         lbl_product8.setFont(fon5);
-        lbl_product8.setBounds(470, 510, 190, 40);
+        lbl_product8.setBounds(495, 510, 190, 40);
         lbl_product8.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product8);
 
@@ -244,9 +244,9 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(700, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product9 = new JLabel("Blue Berry");
+        lbl_product9 = new JLabel("Ice Coffee");
         lbl_product9.setFont(fon5);
-        lbl_product9.setBounds(700, 510, 190, 40);
+        lbl_product9.setBounds(735, 510, 190, 40);
         lbl_product9.setForeground(new Color(255, 255, 200));
         panel.add(lbl_product9);
 
@@ -270,7 +270,7 @@ public class homepage implements ActionListener {
         lbl_imgpro.setBounds(920, 350, 190, 160);
         panel.add(lbl_imgpro);
 
-        lbl_product10 = new JLabel("Whipped cream coffee");
+        lbl_product10 = new JLabel("Whipped Cream Coffee");
         lbl_product10.setFont(fon5);
         lbl_product10.setBounds(920, 510, 190, 40);
         lbl_product10.setForeground(new Color(255, 255, 200));

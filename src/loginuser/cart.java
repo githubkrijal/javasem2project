@@ -76,7 +76,7 @@ public class cart implements ActionListener {
         fon5 = new Font("algerian", Font.BOLD, 25);
 
 
-        lbl_topic = new JLabel("Remove item from cart:");
+        lbl_topic = new JLabel("Remove item from cart :");
         lbl_topic.setFont(fon5);
         lbl_topic.setBounds(780, 400, 500, 40);
         lbl_topic.setForeground(new Color(255, 255, 200));
@@ -102,7 +102,7 @@ public class cart implements ActionListener {
         btn_orderCart.setFont(fon5);
         btn_orderCart.setBackground(new Color(11, 135, 15));
         btn_orderCart.setBorder(new LineBorder(Color.green, 4));
-        btn_orderCart.setForeground(Color.green);
+        btn_orderCart.setForeground(Color.white);
         btn_orderCart.setBounds(855, 125, 200, 50);
         btn_orderCart.addActionListener(this);
         panel.add(btn_orderCart);
@@ -127,7 +127,7 @@ public class cart implements ActionListener {
                 int rowsDeleted = db.executeDelete(sql);
                 model = (DefaultTableModel) jt.getModel();
                 if (rowsDeleted > 0) {
-                    JOptionPane.showMessageDialog(btn_delete, "Juice has been removed from your cart :'(");
+                    JOptionPane.showMessageDialog(btn_delete, "Juice has been removed from your cart.");
                     txt_id.setText("");
                     panel.removeAll();
                     panel.repaint();

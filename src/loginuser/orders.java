@@ -77,7 +77,7 @@ public class orders implements ActionListener {
         btn_delete.setFont(fon5);
         btn_delete.setBackground(new Color(11, 135, 15));
         btn_delete.setBorder(new LineBorder(Color.green, 4));
-        btn_delete.setForeground(Color.green);
+        btn_delete.setForeground(Color.white);
         btn_delete.setBounds(810, 125, 260, 50);
         btn_delete.addActionListener(this);
         panel.add(btn_delete);
